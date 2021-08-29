@@ -9,23 +9,23 @@ public class GamePanel extends JPanel implements ActionListener{
 	static final int SCREEN_WIDTH=600,SCREEN_HEIGHT=600;	//Width and Height of the game Screen
 	static final int UNIT_SIZE=25;		
 	static final int GAME_UNITS=(SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
-	static final int DELAY=100;			//Delay for controlling the game speed, for increasing game speed decrease the delay
-	final int x[]=new int[GAME_UNITS];	//Array for storing the X-coordinates of the body parts of the Snake
-	final int y[]=new int[GAME_UNITS];	//Array for storing the Y-coordinates of the body parts of the Snake
+	static final int DELAY=100;				//Delay for controlling the game speed, for increasing game speed decrease the delay
+	final int x[]=new int[GAME_UNITS];			//Array for storing the X-coordinates of the body parts of the Snake
+	final int y[]=new int[GAME_UNITS];			//Array for storing the Y-coordinates of the body parts of the Snake
 	int bodyLength=3;					//Length of the Snake
 	int applesEaten=0;					//Number of Apples Eaten by the Snake
 	int appleX,appleY;					//Coordinates of the Apple 
 	char direction='R';					//Snake's current direction of movement
-	boolean running=false;				//It represents whether game is Over or In progress
-	boolean paused=false;				//It represents whether game is paused
+	boolean running=false;					//It represents whether game is Over or In progress
+	boolean paused=false;					//It represents whether game is paused
 	Timer timer;						
 	Random random;
 	
 	
 	GamePanel(){
 		random=new Random();
-		this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));	//Setting the size of the Game Screen
-		this.setBackground(Color.black);									//Setting the background color of the game screen;
+		this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));				//Setting the size of the Game Screen
+		this.setBackground(Color.black);								//Setting the background color of the game screen;
 		this.setFocusable(true);
 		this.addKeyListener(new MyKeyAdapter());
 		StartGame();
