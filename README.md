@@ -1,5 +1,5 @@
 # Snake-Game
-A simple Snake Game application made using Java Programming Language and Swing and AWT for the GUI.
+A simple Snake Game application made using Java Programming Language and using Swing and AWT for the GUI.
 
 ## Instructions:
 1. Use the arrow keys to move the Snake.
